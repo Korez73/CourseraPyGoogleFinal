@@ -15,9 +15,6 @@ def is_cpu_ok():
 
 def is_diskspace_ok(drive):
     total, used, free = shutil.disk_usage(drive)
-    #print("Total: {}Gb".format(total // (2 ** 30)))
-    #print("Used: {}Gb".format(used // (2 ** 30)))
-    #print("Free: {}Gb".format(free // (2 ** 30)))
 
     pct_free = (free / total)*100
     is_ok = 20.0 < pct_free
