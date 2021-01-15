@@ -27,9 +27,3 @@ def send_email(email, username, password):
     mail_server.login(username, password)
     mail_server.send_message(email)
     mail_server.quit()
-
-
-
-    
-
-

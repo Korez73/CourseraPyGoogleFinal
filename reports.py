@@ -3,7 +3,7 @@
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
-#this file is imported by reports.py in step 4
+#this file is imported by report_email.py in step 4
 
 
 def generate_report(attachment, title, paragraph):

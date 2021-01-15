@@ -11,6 +11,7 @@ target_dir = r"C:\Repos\CourseraPyGoogleFinal\supplier-data\images"
 
 def convert_images(dir):
     for filename in os.listdir(dir):
+        
         source_path = os.path.join(dir, filename)
         #print(source_path)
         #print(os.path.splitext(filename))
