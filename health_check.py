@@ -7,6 +7,7 @@
 import psutil
 import shutil
 import socket
+from emails import generate_email, send_email
 
 def is_cpu_ok():
     cpu_pct = psutil.cpu_percent()
@@ -35,7 +36,10 @@ def is_url_resolving():
 
 
 def send_email_alert(subject):
-    print("Something bad happened:{}".format(subject))
+    #replace username with actual username
+    eml = generate_email("automation@example.com", "username@exmaple.com", subject, "Please check your system and resolve the issue as soon as possible.")
+    send_email(eml, "username", "password")
+    #print("Something bad happened:{}".format(subject))
 
 if __name__ == "__main__":
     if not is_cpu_ok():

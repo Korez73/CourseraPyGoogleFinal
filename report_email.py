@@ -47,18 +47,18 @@ if __name__ == "__main__":
     
     #read the data from the description text files
     target_dir = r"C:\Repos\CourseraPyGoogleFinal\supplier-data\descriptions"
-    report_body = read_files(target_dir)
+    paragraph = read_files(target_dir)
     
-    attachment_file = r"C:\Repos\CourseraPyGoogleFinal\tmp\processed.pdf"
+    attachment = r"C:\Repos\CourseraPyGoogleFinal\tmp\processed.pdf"
     title = "Processed Update on {}".format(datetime.datetime.now().strftime("%m/%d/%Y"))
     #generate the attachment
-    generate_report(attachment_file, title, report_body)
+    generate_report(attachment, title, paragraph)
 
     #create the email
     subject = "Upload Completed - Online Fruit Store"
     body = "All fruits are uploaded to our website successfully.  A detailed list is attached to this email."
     to = "username@example.com" #replace this with your actual username.
-    email_tosend = generate_email("automation@example.com", to, subject, body, attachment_file)
+    email_tosend = generate_email("automation@example.com", to, subject, body, attachment)
 
     #send the email
     send_email(email_tosend, "username", "password")
